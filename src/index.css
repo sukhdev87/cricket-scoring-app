@@ -1,0 +1,168 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-blue: #1e3a8a;
+  /* Headers and active states */
+  --primary-background: #ffffff;
+  /* Backgrounds and text contrast */
+  --secondary-black: #0f172a;
+  /* Main text */
+  --secondary-grey: #64748b;
+  /* Secondary text, borders, inactive */
+  --secondary-bg-grey: #f1f5f9;
+
+  --action-orange: #f97316;
+  /* Start Match, primary actions */
+  --action-red: #ef4444;
+  /* Wickets, Run Outs */
+  --action-yellow: #eab308;
+  /* Extras, Undo */
+  --action-green: #22c55e;
+  /* Milestones */
+
+  --transition: all 0.2s ease-in-out;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--secondary-bg-grey);
+  color: var(--secondary-black);
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  max-width: 480px;
+  /* Mobile first */
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary-background);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--secondary-black);
+}
+
+.header {
+  background-color: var(--primary-blue);
+  color: var(--primary-background);
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.container {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Base Buttons */
+.btn {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--action-orange);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-bg-grey);
+  color: var(--secondary-black);
+  border: 1px solid var(--secondary-grey);
+}
+
+.btn-wicket {
+  background-color: var(--action-red);
+  color: white;
+}
+
+.btn-extra {
+  background-color: var(--action-yellow);
+  color: var(--secondary-black);
+}
+
+.btn-run {
+  background-color: var(--secondary-bg-grey);
+  color: var(--secondary-black);
+  border: 1px solid #cbd5e1;
+}
+
+/* Inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: var(--secondary-grey);
+  font-size: 0.9rem;
+}
+
+.input-field {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.input-field:focus {
+  outline: 2px solid var(--primary-blue);
+  border-color: transparent;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}

@@ -1,0 +1,213 @@
+/* src/App.css */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Score Display */
+.score-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.7));
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.score-display::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 60%);
+  pointer-events: none;
+}
+
+.main-score {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -2px;
+  background: linear-gradient(180deg, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.main-score .wickets {
+  color: var(--accent-wicket);
+  font-size: 3rem;
+  -webkit-text-fill-color: var(--accent-wicket);
+}
+
+.overs {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.crr {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Current Over Tracker */
+.over-tracker {
+  padding: 1rem 1.25rem;
+}
+
+.over-tracker h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 1.5px;
+}
+
+.balls-container {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.ball-bubble {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.ball-bubble.run {
+  color: var(--text-primary);
+}
+
+.ball-bubble.boundary {
+  background: var(--accent-run);
+  color: white;
+  border-color: var(--accent-run);
+  box-shadow: var(--glow-run);
+}
+
+.ball-bubble.wicket {
+  background: var(--accent-wicket);
+  color: white;
+  border-color: var(--accent-wicket);
+  box-shadow: var(--glow-wicket);
+}
+
+.ball-bubble.extra {
+  color: var(--accent-extra);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+/* Action Controls */
+.action-controls {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.control-section h3 {
+  margin: 0 0 1rem 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 1.5px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+  gap: 0.75rem;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  border-radius: 0.75rem;
+  padding: 1rem 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.primary {
+  margin-top: 1rem;
+}
+
+.btn-run:hover {
+  border-color: var(--accent-run);
+  color: var(--accent-run);
+}
+
+.btn-boundary {
+  color: var(--accent-run);
+}
+
+.btn-boundary:hover {
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.btn-wicket {
+  color: var(--accent-wicket);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.btn-wicket:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: var(--accent-wicket);
+}
+
+.btn-extra {
+  color: var(--accent-extra);
+}
+
+.btn-extra:hover {
+  border-color: var(--accent-extra);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* Utility */
+.mb-0 {
+  margin-bottom: 0;
+}
