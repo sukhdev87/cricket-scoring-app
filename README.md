@@ -1,16 +1,26 @@
-# React + Vite
+# 🏏 Cricket Scoring Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic, real-time cricket scoring web application built with **React** and **Vite**. This tool allows users to track match progress, manage player rotations, and generate detailed post-match reports.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Smart Inning Management:** Automatically ends innings based on user-defined over limits (e.g., T20, ODI) or wicket limits.
+* **Real-Time Analytics:** Calculates and displays the Required Run Rate (RRR) instantly during the second innings.
+* **Player Rotations:** Seamlessly prompts the user to add new batsmen after wickets and new bowlers after overs.
+* **Live Over Overview:** Tracks runs, extras, and wickets for the current over.
+* **PDF Match Summaries:** Generates and downloads a complete match report, including full bowler summaries and figures.
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Frontend Framework:** React
+* **Build Tool:** Vite (for fast, optimized development)
+* **PDF Generation:** jsPDF
+* **Development Environment:** Antigravity IDE
 
-## Expanding the ESLint configuration
+## 🛠️ Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To run this project locally on your machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/sukhdev87/cricket-scoring-app.git](https://github.com/sukhdev87/cricket-scoring-app.git)
